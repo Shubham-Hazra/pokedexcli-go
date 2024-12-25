@@ -20,10 +20,6 @@ func (c *Cache) Add(key string, val []byte) {
 	c.mu.Lock()
 	defer c.mu.Unlock()
 
-	if c.entries == nil {
-		c.entries = make(map[string]CacheEntry)
-	}
-
 	if _, ok := c.entries[key]; ok {
 		log.Printf("Key: %v, already exists in cache", key)
 		return

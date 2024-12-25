@@ -16,7 +16,7 @@ import (
 
 const (
 	baseAPIURL    = "https://pokeapi.co/api/v2"
-	cacheInterval = 1 * time.Minute
+	cacheInterval = 15 * time.Second
 )
 
 type Config struct {
